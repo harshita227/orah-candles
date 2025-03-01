@@ -1,40 +1,253 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+p,
+h1 {
+  margin: 0;
+}
+.left-part,
+.right-part {
+  color: black;
+}
+#root {
+  text-align: center;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.top-header p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.middle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.logo {
+  text-align: center;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.user-cart {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  font-size: 26px;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #f8f8f8;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.fixed-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero-section {
+  margin-top: 80px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100vw; /* Full width */
+  max-width: 100%; /* Prevent container restrictions */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.shop-now {
+  background: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.shop-now:hover {
+  background: #b22222;
+}
+
+/* Animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+.pro {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%; /* Ensures full width */
+  max-width: 100%; /* Prevents container restrictions */
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Color Palette */
+  --background-color: #f5efe6; /* Warm Beige */
+  --text-color: #3e2723; /* Deep Espresso */
+  --accent-color: #d87c5d; /* Burnt Orange */
+  --button-color: #9a8c98; /* Olive Green */
+  --button-hover-color: #6b5b5b; /* Darker Olive */
+
+  color: var(--text-color);
+  background-color: var(--background-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  width: 100%;
+  font-family: Arial, sans-serif;
+  display: block; /* Ensuring default flow */
 }
-a:hover {
-  color: #535bf2;
+
+.fixed-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-bottom {
+  width: 100%;
+  background: #f8f8f8;
+  z-index: 1000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.announcement-bar {
+  background: #ff6f61;
+  color: white;
+  align-items: center;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.hero-section {
+  margin-top: 100px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+a:hover {
+  color: #b22222; /* Slightly darker burnt orange */
+}
+
+/* Headings */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: var(--text-color);
 }
 
+/* Buttons */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -42,27 +255,342 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button-color);
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.3s, border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  background-color: var(--button-hover-color);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/* Ensures body has enough space for fixed headers */
 
+/* Announcement Bar - Scrolls Away */
+.top-header {
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  background: #ff6f61;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.announcement {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: var(--text-color);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Light Mode (Optional) */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--text-color);
+    background-color: var(--background-color);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+/*for footer*/
+.newsletter {
+  max-width: 300px;
+}
+
+.newsletter h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  gap: 5px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-group button {
+  padding: 8px 15px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  background-color: #b22222;
+}
+.social-links i {
+  font-size: 24px; /* Size bada karna hai toh yahan change karo */
+  color: #dc3545; /* Icon ka color */
+  transition: color 0.3s ease;
+}
+
+.social-links i:hover {
+  color: #b22222; /* Hover pe color change */
+}
+.right-part {
+  font-size: 1.2rem; /* Increase font size */
+  color: #000; /* Match left part color */
+}
+
+.footer-links li a {
+  color: #dc3545; /* Match text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-links li a:hover {
+  color: #b22222; /* Change color on hover */
+}
+
+/* 
+.gallery-container {
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.buy-now {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.insta-icon {
+  font-size: 24px;
+  color: white;
+}
+
+
+
+.gallery-item:hover .video-item {
+  opacity: 1;
+} */
+.gallery-container {
+  text-align: center;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  max-width: 80%;
+  padding: 10px;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE */
+}
+
+.gallery::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.gallery-item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.buy-now {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.insta-icon {
+  font-size: 24px;
+  color: white;
+}
+.logo {
+  height: 100px;
+  display: block;
+  width: 130px;
+}
+
+/*  Products css */
+
+.product-card {
+  position: relative;
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container img.hovered {
+  transform: translateY(50%);
+}
+
+.product-info {
+  padding: 10px;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.buttons.visible {
+  opacity: 1;
+}
+
+.buy-now,
+.add-to-cart {
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  background-color: #008cba;
+}
+
+.buy-now:hover,
+.add-to-cart:hover {
+  opacity: 0.8;
 }
