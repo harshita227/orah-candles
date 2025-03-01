@@ -93,18 +93,6 @@ a {
 }
 
 /* Hero Section */
-.hero-section {
-  margin-top: 80px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  width: 100vw; /* Full width */
-  max-width: 100%; /* Prevent container restrictions */
-}
 
 .hero-content p {
   font-size: 1.2rem;
@@ -121,7 +109,8 @@ a {
   border-radius: 5px;
 }
 
-.shop-now:hover {
+.shop-now:hover,
+button:hover {
   background: #b22222;
 }
 
@@ -208,7 +197,6 @@ body {
 }
 
 .hero-section {
-  margin-top: 100px;
   height: 400px;
   display: flex;
   align-items: center;
@@ -255,14 +243,9 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--button-color);
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s, border-color 0.25s;
-}
-
-button:hover {
-  background-color: var(--button-hover-color);
+  transition: 0.3s, border-color 0.25s;
 }
 
 button:focus,
@@ -509,16 +492,6 @@ footer {
   opacity: 1;
 }
 
-.buy-now {
-  background-color: #ff9800;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
 .insta-icon {
   font-size: 24px;
   color: white;
@@ -530,67 +503,62 @@ footer {
 }
 
 /*  Products css */
-
 .product-card {
   position: relative;
-  width: 250px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
+  width: 300px; /* Adjust as needed */
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  padding: 10px;
+  overflow: hidden;
 }
 
 .image-container {
-  width: 100%;
-  height: 250px;
+  position: relative;
+  height: 220px; /* Adjust as needed */
   overflow: hidden;
 }
 
 .image-container img {
   width: 100%;
-  height: 100%;
   transition: transform 0.3s ease-in-out;
 }
 
-.image-container img.hovered {
-  transform: translateY(50%);
-}
-
-.product-info {
-  padding: 10px;
+.product-card:hover .image-container img {
+  transform: translateY(-20px); /* Move image up */
 }
 
 .buttons {
   position: absolute;
-  bottom: 10px;
+  bottom: -50px; /* Initially hidden */
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  gap: 5px;
+  transition: bottom 0.3s ease-in-out;
 }
 
-.buttons.visible {
-  opacity: 1;
+.product-card:hover .buttons {
+  bottom: 30px; /* Bring buttons up */
 }
 
+button,
 .buy-now,
 .add-to-cart {
-  background-color: #ff6f00;
-  color: white;
-  border: none;
   padding: 8px 12px;
-  border-radius: 5px;
+  font-size: 14px;
   cursor: pointer;
+  background-color: #dc3545;
 }
-
-.add-to-cart {
-  background-color: #008cba;
+.btn-blog {
+  margin-top: 10px;
+  border-radius: 2px;
 }
-
-.buy-now:hover,
-.add-to-cart:hover {
-  opacity: 0.8;
+.add-to-cart,
+.buy-now {
+  margin-bottom: 10px;
+}
+.product-title,
+.product-price {
+  font-size: medium;
+  color: #b22222;
 }
