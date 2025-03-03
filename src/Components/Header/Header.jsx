@@ -1,6 +1,14 @@
 import { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 function Header() {
+  const navigate = useNavigate();
+  const sendBtn = () => {
+    navigate("/cartpage");
+  };
+  const cartItems = useSelector((state) => state.userCart.cartItems); // Now using cartItems array
+  console.log(cartItems);
   const announcements = [
     "Special Offer: Get 20% Off!",
     "Free Shipping on Orders Above ₹999!",
@@ -51,17 +59,24 @@ function Header() {
             </a>
           </div>
           <div className="user-cart">
-            <a href="#" className="user-icon">
-              <i className="bi bi-person"></i>
-            </a>
-            <a href="#" className="cart-icon">
-              <i className="bi bi-cart"></i>{" "}
-            </a>
+            <Link to="/userpage" className="user-icon ">
+              <i className="bi bi-person "></i>
+            </Link>
+            {/* <Link to="/about">Go to About</Link> */}
+            <button onClick={sendBtn} className="cart-icon position-relative">
+              <i className="bi bi-cart"></i>
+              <span className="position-absolute top-0 start-100 translate-middle p-2 bg-primary border border-light rounded-circle">
+                {cartItems.length}
+              </span>
+            </button>
           </div>
         </div>
 
         <nav className="header-bottom">
           <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
             <li>
               <a href="#">Collaborations</a>
             </li>
@@ -69,13 +84,7 @@ function Header() {
               <a href="#">Shop</a>
             </li>
             <li>
-              <a href="#">Home Decor</a>
-            </li>
-            <li>
-              <a href="#">Giftings</a>
-            </li>
-            <li>
-              <a href="#">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
               <a href="#">Orah By You</a>
