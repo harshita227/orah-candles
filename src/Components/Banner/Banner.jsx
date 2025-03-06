@@ -1,4 +1,10 @@
+import { Navigate, useNavigate } from "react-router-dom";
 function Banner() {
+  const navigate = useNavigate();
+
+  const redirectShop = () => {
+    navigate("/shopnow");
+  };
   return (
     <section className="hero-section">
       <div className="hero-content">
@@ -6,7 +12,9 @@ function Banner() {
         <p className="text-danger">
           Illuminate Your Space with Nature’s Radiance
         </p>
-        <button className="shop-now">Shop Now</button>
+        <button className="shop-now" onClick={redirectShop}>
+          Shop Now
+        </button>
       </div>
     </section>
   );

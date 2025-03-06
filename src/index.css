@@ -562,3 +562,63 @@ button,
   font-size: medium;
   color: #b22222;
 }
+
+.cart-dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 250px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.cart-dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.cart-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.cart-item-details p {
+  margin: 0;
+  font-size: 14px;
+}
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+  font-size: 16px;
+}
+.go-to-cart-btn {
+  width: 100%;
+  background: #3498db;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.empty-cart {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}

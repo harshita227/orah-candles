@@ -1,12 +1,11 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import Login from "./Login";
 
 function Userpage() {
   return (
     <>
       <Header />
-      <Login />
+      <h2>Login Page</h2>
       <Footer />
     </>
   );

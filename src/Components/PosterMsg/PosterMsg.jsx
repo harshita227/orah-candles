@@ -22,9 +22,11 @@
 // }
 
 // export default PosterMsg;
+import { Navigate, useNavigate } from "react-router-dom";
 function PosterMsg() {
+  const navigate = useNavigate();
   const productListRedirect = () => {
-    console.log("Running");
+    navigate("/shopnow");
   };
 
   return (
