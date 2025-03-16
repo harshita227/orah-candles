@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Footer.css";
 
 function Footer() {
   const [message, setMessage] = useState("");

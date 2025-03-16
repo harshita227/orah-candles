@@ -4,7 +4,6 @@ import GetInsp from "../GetInsp/GetInsp";
 import Footer from "../Footer/Footer";
 import PosterMsg from "../PosterMsg/PosterMsg";
 import Header from "../Header/Header";
-
 function Home() {
   return (
     <>

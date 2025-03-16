@@ -1,0 +1,62 @@
+/* //orahby you */
+.customization-page {
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.banner-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  text-align: center;
+  z-index: 2;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.static-images {
+  margin-top: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  width: 300px;
+  height: 300px;
+}

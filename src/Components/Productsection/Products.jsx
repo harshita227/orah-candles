@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { add_cart } from "../Redux/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
+import "./Product.css";
 const Products = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const Products = () => {
   return (
     <section className="container pro d-flex flex-column">
       <h2 className="text-danger">Featured Collection</h2>
-      <div className="product-list d-flex gap-3">
+      <div className="product-list d-flex gap-2">
         {productList.map((product, index) => (
           <div
             key={product.id}

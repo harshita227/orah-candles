@@ -1,0 +1,71 @@
+/* collab */
+.video-wrapper {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.video-container {
+  height: 600px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* 📌 Content Box */
+.content-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+}
+
+/* 🎨 Button Styling */
+.btn-dark {
+  background-color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-dark:hover {
+  background-color: #000;
+  transform: scale(1.05);
+}
+
+/* 🌿 Breadcrumb Styling */
+.breadcrumb-container {
+  padding: 12px 0;
+  border-radius: 8px;
+}
+
+.breadcrumb {
+  margin: 0;
+  padding: 8px 15px;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  font-size: 16px;
+}
+
+.breadcrumb-item {
+  font-weight: 500;
+}
+
+.breadcrumb-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.breadcrumb-link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}

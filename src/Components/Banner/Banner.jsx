@@ -1,4 +1,5 @@
 import { Navigate, useNavigate } from "react-router-dom";
+import "./Banner.css";
 function Banner() {
   const navigate = useNavigate();
 
@@ -8,7 +9,7 @@ function Banner() {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h1>Welcome to Orah Candles</h1>
+        <h1 className="text-danger">Welcome to Orah Candles</h1>
         <p className="text-danger">
           Illuminate Your Space with Nature’s Radiance
         </p>

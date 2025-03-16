@@ -1,27 +1,3 @@
-// function PosterMsg() {
-//   const productListRedirect = () => {
-//     console.log("Running");
-//   };
-//   return (
-//     <>
-//       <section className="container pro d-flex justify-content-evenly m-5">
-//         <div className="section-msg">
-//           <p className="text-danger">
-//             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-//             harum! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-//             Dicta, ullam!
-//           </p>
-//           <button onClick={productListRedirect}> Learn More</button>
-//         </div>
-//         <div className="section-img">
-//           <img src="/images/img1.jpeg" width="400px" height="350px" />
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
-
-// export default PosterMsg;
 import { Navigate, useNavigate } from "react-router-dom";
 function PosterMsg() {
   const navigate = useNavigate();

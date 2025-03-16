@@ -1,0 +1,75 @@
+/* Footer */
+footer {
+  background-color: var(--text-color);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Light Mode (Optional) */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+}
+/*for footer*/
+.newsletter {
+  max-width: 300px;
+}
+
+.newsletter h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  gap: 5px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-group button {
+  padding: 8px 15px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  background-color: #b22222;
+}
+.social-links i {
+  font-size: 24px; /* Size bada karna hai toh yahan change karo */
+  color: #dc3545; /* Icon ka color */
+  transition: color 0.3s ease;
+}
+
+.social-links i:hover {
+  color: #b22222; /* Hover pe color change */
+}
+.right-part {
+  font-size: 1.2rem; /* Increase font size */
+  color: #000; /* Match left part color */
+}
+
+.footer-links li a {
+  color: #dc3545; /* Match text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-links li a:hover {
+  color: #b22222; /* Change color on hover */
+}
+.left-part,
+.right-part {
+  color: black;
+}
