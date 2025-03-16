@@ -75,8 +75,29 @@ function Header() {
               <img src="/images/logo-orah.png" className="logo" alt="Logo" />
             </Link>
           </div>
+
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/collabaration">Collabrations</Link>
+              </li>
+              <li>
+                <Link to="/shopnow">Shop</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/orah">Orah By You</Link>
+              </li>
+            </ul>
+          </nav>
+
           {/** For serach Bar with Suggestions */}
-          <div className="search-bar">
+          {/* <div className="search-bar">
             <input
               type="text"
               value={query}
@@ -87,7 +108,7 @@ function Header() {
               <i className="bi bi-search"></i>
             </button>
           </div>
-          {/**Only Check */}
+          //only check
           {suggestions.length > 0 && (
             <ul className="position-absolute top-50  start-50 translate-middle-x d-flex flex-column w-50 bg-white border border-secondary rounded p-2 list-unstyled shadow">
               {suggestions.map((item, index) => (
@@ -103,7 +124,7 @@ function Header() {
                 </li>
               ))}
             </ul>
-          )}
+          )} */}
 
           <div className="user-cart">
             <Link to="/userpage" className="user-icon">
@@ -162,26 +183,6 @@ function Header() {
             </div>
           </div>
         </div>
-
-        <nav className="header-bottom">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/collabaration">Collabrations</Link>
-            </li>
-            <li>
-              <Link to="/shopnow">Shop</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/orah">Orah By You</Link>
-            </li>
-          </ul>
-        </nav>
       </div>
     </>
   );

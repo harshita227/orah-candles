@@ -8,7 +8,7 @@ function Banner() {
   };
   return (
     <section className="hero-section">
-      <div className="hero-content">
+      <div className="hero-content banner">
         <h1 className="text-danger">Welcome to Orah Candles</h1>
         <p className="text-danger">
           Illuminate Your Space with Nature’s Radiance
