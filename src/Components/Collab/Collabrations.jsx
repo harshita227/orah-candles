@@ -53,7 +53,7 @@ const Collaborations = () => {
             {/* 🎥 Video Section */}
             <div className="col-md-6">
               <div className="video-wrapper">
-                <video className="video-container" controls>
+                <video className="video-container" autoplay muted control>
                   <source src={influencer.video} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
